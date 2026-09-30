@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooden Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="wood-background">
+    <div class="wood-line line1"></div>
+    <div class="wood-line line2"></div>
+    <div class="wood-line line3"></div>
+    <div class="wood-line line4"></div>
+</div>
+
+<main class="game-container">
+
+    <header>
+        <div class="star">✦</div>
+        <h1>Tic-Tac-Toe</h1>
+        <p>Classic Wooden Edition</p>
+    </header>
+
+    <div class="player-names">
+
+        <div class="name-box">
+            <label>Player X</label>
+            <input type="text" id="playerX" value="Player X" maxlength="15">
+        </div>
+
+        <div class="name-box">
+            <label>Player O</label>
+            <input type="text" id="playerO" value="Player O" maxlength="15">
+        </div>
+
+    </div>
+
+    <section class="scoreboard">
+
+        <div class="score x-score">
+            <span class="symbol">X</span>
+            <span id="scoreX">0</span>
+        </div>
+
+        <div class="turn-box">
+            <span id="turnText">YOUR TURN</span>
+            <small id="moveCount">Move 0 / 9</small>
+        </div>
+
+        <div class="score o-score">
+            <span class="symbol">O</span>
+            <span id="scoreO">0</span>
+        </div>
+
+    </section>
+
+    <div class="controls">
+
+        <button class="mode-btn active" data-mode="pvp">
+            Two Players
+        </button>
+
+        <button class="mode-btn" data-mode="computer">
+            Computer
+        </button>
+
+    </div>
+
+    <div class="difficulty-box" id="difficultyBox">
+
+        <label>Difficulty</label>
+
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Impossible</option>
+        </select>
+
+    </div>
+
+    <div class="timer-box">
+        <span>⏱</span>
+        <span id="timer">10</span>
+    </div>
+
+    <div class="board" id="board">
+
+        <button class="cell" data-index="0"></button>
+        <button class="cell" data-index="1"></button>
+        <button class="cell" data-index="2"></button>
+
+        <button class="cell" data-index="3"></button>
+        <button class="cell" data-index="4"></button>
+        <button class="cell" data-index="5"></button>
+
+        <button class="cell" data-index="6"></button>
+        <button class="cell" data-index="7"></button>
+        <button class="cell" data-index="8"></button>
+
+        <div class="winning-line" id="winningLine"></div>
+
+    </div>
+
+    <p class="message" id="message">
+        Make your move!
+    </p>
+
+    <div class="game-buttons">
+
+        <button id="newRound">
+            New Round
+        </button>
+
+        <button id="resetScore">
+            Reset Score
+        </button>
+
+        <button id="soundButton">
+            🔊 Sound
+        </button>
+
+    </div>
+
+</main>
+
+<div class="result-overlay" id="resultOverlay">
+
+    <div class="result-box">
+
+        <div class="result-icon">✦</div>
+
+        <h2 id="resultTitle">
+            Winner!
+        </h2>
+
+        <p id="resultMessage">
+            Player X wins!
+        </p>
+
+        <button id="playAgain">
+            Play Again
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
